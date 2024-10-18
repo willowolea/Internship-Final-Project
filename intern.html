@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width", initial-scale="1.0">
+    
+    <link rel="icon" type="image/icon" href="image/dreamitLogo.png">
+    <title>Intern Details</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        
+    <script src="https://kit.fontawesome.com/939a0fa897.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/cssAdmin/internAdmin.css">
+  </head>
+  <body>
+    <main class="main-container">
+        
+        <div class="main-title">
+
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search Intern">
+                <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <div class="icon-container">
+                <div class="icon" id="display-container-intern">
+                    <a href="addIntern.html"><button><i class="fa-solid fa-user-plus"></i>New Intern</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>IC Number.</th>
+                        <th>Password</th>
+                        <th>Full Name</th>
+                        <th>Phone Number</th>
+                        <th>Starting Date</th>
+                        <th>Completion Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>031203080090</td>
+                        <td>01123Najihah</td>
+                        <td>Nur Najihah Nadjwa</td>
+                        <td>0126480509</td>
+                        <td>18-09-23</td>
+                        <td>01-03-24</td>
+                        <td>
+                            <div class="button-container">
+                                <a href="updateIntern.html"><button><i class="fa-solid fa-pen-to-square"></i>Update</button></a>
+                                <a href=""><button><i class="fa-solid fa-trash"></i>Delete</button></a>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width", initial-scale="1.0">
+    
+    <link rel="icon" type="image/icon" href="image/dreamitLogo.png">
+    <title>Header Administration</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        
+    <script src="https://kit.fontawesome.com/939a0fa897.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/cssAdmin/headerAdmin.css">
+  </head>
+  <body>
+    <header> 
+  
+        <div class="logosec"> 
+            <div class="logo"><img src="image/dreamitLogo.png"></div> 
+            <input type="checkbox" id="check">
+              <label for="check" class="menu-toggle">
+                <i class="fas fa-bars menuicn" id="btn"></i>
+                <i class="fas fa-times menuicn" id="cancel"></i>
+              </label>
+        </div> 
+  
+        <div class="searchbar"> 
+            <input type="text" placeholder="Search"> 
+            <div class="searchbtn"> 
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div> 
+        </div> 
+  
+        <div class="message"> 
+              <div class="dp"> 
+                <i class="fa-solid fa-circle-user"></i>
+              </div> 
+        </div> 
+  
+    </header> 
+
+    <div class="sidebar" id="sidebar">
+      <ul>
+        <li><a href=""><i class="fa-solid fa-gauge"></i>Dashboard</a></li>
+        <li><a href=""><i class="fa-solid fa-newspaper"></i>Tasks</a></li>
+        <li><a href=""><i class="fa-solid fa-briefcase"></i>Task Status</a>
+        
+        </li>
+        <li><a href=""><i class="fa-solid fa-address-card"></i>Intern</a></li>
+        <li class="logout-admin"><a href=""><i class="fa-solid fa-right-from-bracket"></i>Log out</a></li>
+      </ul>
+   </div>
+   
+   <main class="main-container">
+  
+   </main>
+   <script>
+    const check = document.getElementById('check');
+    const sidebar = document.getElementById('sidebar');
+  
+    check.addEventListener('change', () => {
+      sidebar.classList.toggle('open', check.checked);
+    });
+  </script>
+  </body>
+</html>

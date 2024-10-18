@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width", initial-scale="1.0">
+    
+    <link rel="icon" type="image/icon" href="image/dreamitLogo.png">
+    <title>Add New Task</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        
+    <script src="https://kit.fontawesome.com/939a0fa897.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/cssAdmin/taskIntern.css">
+  </head>
+  <body>
+    <div class="task-container">
+        <div class="task-form-container" id="formContainersupp">
+            <div class="task-con-title">
+                <h3>New Task Form</h3>
+                <a href='taskAdmin.html'><i class="fa-solid fa-xmark"></i></a>
+            </div>
+            <form method="POST">
+                <div class="input-group">
+                    <select id="options" name="IC Number">
+                      <option value="in_progress" not required>Select IC Number</option>
+                      <option value="in_progress">031203080090</option>
+                      <option value="completed">031018145678</option>
+                      <option value="not_started">011103143456</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="internName" name="internName" placeholder="Enter Intern Name">
+                </div>
+
+                <div class="input-group">
+                    <div class="assign">
+                        <label for="assignDate">Assign Date</label>
+                        <input type="date" id="assignDate" name="assignDate" placeholder="Enter Assigned Date">
+                    </div>
+                    <div class="assign">
+                        <label for="assignTime">Assign Time</label>
+                        <input type="time" id="assignTime" name="assignTime" placeholder="Enter Assigned Time">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <div class="submission">
+                        <label for="submissionDate">Submission Date</label>
+                        <input type="date" id="submissionDate" name="submissionDate" placeholder="Enter Submission Date">
+                    </div>
+                    <div class="submission">
+                        <label for="submissionTime">Submission Time</label>
+                        <input type="time" id="submissionTime" name="submissionTime" placeholder="Enter Submission Time">
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <input type="text" id="newTaskTitle" name="newTaskTitle" placeholder="Enter Task Title">
+                </div>
+                <div class="input-group">
+                    <textarea id="description" name="description" rows="5" cols="50" placeholder="Enter your description here"></textarea>
+                </div>
+                <div class="input-group">
+                    <label for="uploadedFile">Upload File</label>
+                    <input type="file" id="uploadedFile" name="uploadedFile">
+                </div>
+                <div class="input-group">
+                    <select id="taskStatus" name="taskStatus">
+                        <option value="in_progress" not required>Select Task Status</option>
+                        <option value="in_progress">Not Started</option>
+                        <option value="completed">In Progress</option>
+                        <option value="not_started">Completed</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn">Create</button>
+            </form>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width-device-width", initial-scale="1.0">
+    
+    <link rel="icon" type="image/icon" href="image/dreamitLogo.png">
+    <title>Header User</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins:wght@500&display=swap" rel="stylesheet">
+        
+    <script src="https://kit.fontawesome.com/939a0fa897.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="css/headerUser.css">
+  </head>
+
+  <body>
+    <div class="sidebar">
+      <div class="logo-details">
+          <img src="image/dreamitLogo.png" alt="Dreamit Real Solutions Logo">
+          <i class="fa-solid fa-bars" id="btn" ></i>
+          <i class="fa-solid fa-xmark" id="close"></i>
+      </div>
+      <ul class="nav-list">
+        <li>
+          <a href="#">
+            <i class="fa-solid fa-square-poll-vertical"></i>
+            <span class="links_name">Dashboard</span>
+          </a>
+          <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+        <a href="#">
+          <i class="fa-solid fa-bars-progress" ></i>
+          <span class="links_name">Tasks To do</span>
+        </a>
+        <span class="tooltip">Tasks To do</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-square-check" ></i>
+          <span class="links_name">Completed</span>
+        </a>
+        <span class="tooltip">Completed</span>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fa-solid fa-user" ></i>
+          <span class="links_name">Profile</span>
+        </a>
+        <span class="tooltip">Profile</span>
+      </li>
+
+      <li class="profile">
+          <div class="profile-details">
+            <img src="" alt="profileImg">
+            <div class="name_job">
+              <div class="name">Nur Najihah</div>
+              <div class="job">IT intern</div>
+            </div>
+          </div>
+          <i class="fa-solid fa-right-to-bracket" id="log_out" ></i>
+      </li>
+      </ul>
+    </div>
+
+    <main class="main-container">
+      <div class="main-title">
+        <p class="font-weight-bold">DASHBOARD</p>
+      </div>
+    </main>
+
+    <script>
+      let sidebar = document.querySelector(".sidebar");
+      let closeBtn = document.querySelector("#close");
+      let barsBtn = document.querySelector("#btn");
+
+      closeBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+
+      barsBtn.addEventListener("click", () => {
+        sidebar.classList.toggle("open");
+        menuBtnChange();
+      });
+
+      function menuBtnChange() {
+        if (sidebar.classList.contains("open")) {
+          closeBtn.classList.replace("fa-solid fa-bars", "fa-solid fa-xmark");
+        } else {
+          closeBtn.classList.replace("fa-solid fa-xmark", "fa-solid fa-bars");
+        }
+      }
+    </script>
+  </body>
+</html>
