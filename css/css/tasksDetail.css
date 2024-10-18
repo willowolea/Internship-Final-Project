@@ -1,0 +1,298 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #7b5e00;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fffdf6;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 260px 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 3fr;
+    grid-template-areas: 
+    "sidebar header header header"
+    "sidebar main main main";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 30px 0 30px;
+    box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
+    left: 78px; /* Adjust left position to match sidebar width */
+    top: 0;
+    width: calc(100% - 78px); /* Adjust width to fill remaining space */
+    transition: all 0.5s ease;
+    z-index: 2;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.sidebar.open ~ .main-container {
+    left: 180px; /* Keep left position same as sidebar width */
+    width: calc(100% - 180px); /* Adjust width to fill remaining space */
+}
+
+.main-title {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-title p {
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    margin-left: 20px; /* Reset margin-left */
+}
+
+.main-title i{
+    font-size:  25px;
+    margin-left: 1000px;
+    margin-right: auto;
+    text-decoration: none;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.main-title i:hover{
+    color: rgb(141, 181, 255);
+    cursor: pointer;
+}
+
+.main-container > form{
+    margin:10px 20px;
+}
+
+table {
+    width: 90%; /* Reduce width */
+    margin-top: 20px;
+    border: 1px solid #7b5e00;
+    border-collapse: collapse;
+    margin-left: 20px; /* Center the table horizontally */
+    margin-right: auto; 
+}
+
+th, td {
+    border: 1px solid #7b5e00;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word; 
+    font-size: 17px;
+}
+
+th{
+    font-family: 'Poppins', sans-serif;
+}
+
+tr {
+    background-color: #fff2a8;
+}
+
+td{
+    background-color: #fef9dc;
+    height: fit-content;
+    word-wrap: break-word;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a.button {
+    display: inline-block;
+    padding: 10px;
+    background-color: #fff2a8;
+    font-weight: 600;
+    color: #7b5e00;
+    text-decoration: none;
+    border: 1px solid #7b5e00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+a.button:hover {
+    background-color: #7b5e00;
+    color: #fff2a8;
+}
+
+input[type="file"] {
+    margin-top: 10px;
+}
+
+form{
+    margin: auto;
+    width: 90%; /* Reduce width */
+    background-color: #fef9dc;
+    border-radius: 5px;
+    border: 1px solid #7b5e00;
+    padding: 20px; /* Reduce padding */
+    background-color: #fef9dc;
+    border-radius: 5px;
+    border: 1px solid #7b5e00;
+    font-size: 17px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+form input{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 320px;
+    height: 40px;
+    border: 1px solid #7b5e00;
+    margin-left: 6px;
+    padding: 7px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 1px;
+    border: 1px solid #7b5e00;
+    border-radius: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #7b5e00;
+    resize: vertical;
+    border-radius: 5px;
+}
+
+select {
+    padding: 8px; /* Adjust padding as needed */
+    font-size: 16px;
+    border: 1px solid #7b5e00; /* Add border for better visibility */
+    border-radius: 6px; /* Add border radius for rounded corners */
+    outline: none; /* Remove default outline */
+    background-color: #fff; /* Background color */
+}
+
+/* Style the options within the dropdown */
+option {
+    font-size: 16px;
+}
+
+/* Style the dropdown arrow */
+select {
+    appearance: none; /* Remove default arrow styling */
+}
+
+/* Apply custom arrow styling */
+select::-ms-expand {
+    display: none; /* Hide default arrow in IE10+ */
+}
+
+select::after {
+    content: '\25BC'; /* Unicode for down arrow */
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none; /* Prevent clicking on the arrow */
+}
+
+.button-group {
+    display: flex;
+    width: 100%;
+}
+
+.submit-button {
+    display: block;
+    margin: 20px auto; /* Center the button horizontally and add space above and below */
+    padding: 10px 20px; /* Adjust padding as needed */
+    background-color: #fff2a8;
+    font-weight: 600;
+    color: #7b5e00;
+    text-decoration: none;
+    border: 1px solid #7b5e00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #7b5e00;
+    color: #fff2a8;
+}
+
+.checkbox-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Adjust vertical alignment */
+    margin-right: 5px; /* Adjust margin as needed */
+}
+
+.checkbox-container label {
+    display: inline-block;
+    vertical-align: middle; /* Align label vertically with the checkbox */
+    font-size: 16px; /* Adjust font size as needed */
+}
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main";
+    }
+
+    .header {
+        justify-content: space-between; /* Adjust header alignment */
+        padding: 0 20px;
+    }
+
+    .main-container {
+        width: 100%; /* Adjust width to fill the entire screen */
+        left: 0;
+    }
+
+    .sidebar.open ~ .main-container {
+        left: 0;
+    }
+
+    .main-title {
+        margin-left: 0px; /* Adjust margin for smaller screens */
+    }
+
+    .main-title i{
+        margin-left: 360px;
+    }
+
+    form input,
+    form textarea {
+        width: calc(100% - 12px); /* Adjust input width */
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,186 @@
+/* Reset styles */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* CSS variables */
+:root { 
+    --background-color1: #fafaff; 
+    --background-color2: #ffffff; 
+    --background-color3: #ededed; 
+    --background-color4: #cad7fda4; 
+    --primary-color: #4b49ac; 
+    --secondary-color: #0c007d; 
+    --border-color: #3f0097; 
+    --one-use-color: #3f0097; 
+    --two-use-color: #5500cb; 
+} 
+
+/* Body styles */
+body {
+    background-color: var(--background-color4);
+    max-width: 100%; 
+    overflow-x: hidden; 
+}
+
+/* Main container styles */
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--background-color3);
+    border-radius: 6px;
+    box-shadow: 0 0 10px darkslategrey;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* History details container styles */
+.history-details {
+    border-radius: 10px;
+    padding: 6px;
+    font-family: 'Montserrat', sans-serif;
+    overflow-y: auto;
+    max-height: 80vh;
+    width: 90%;
+    margin: 20px auto;
+}
+
+/* History title styles */
+.history-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.history-title h3 {
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.history-title i {
+    font-size: 25px;
+    margin-top: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Task info styles */
+.task-info {
+    margin-bottom: 30px;
+}
+
+.info-item {
+    margin-bottom: 15px;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.info-value {
+    margin-left: 10px;
+}
+
+/* File links styles */
+.file-links a {
+    margin-right: 10px;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.file-links a:hover {
+    color: #0056b3;
+}
+
+/* Task history styles */
+.task-history h2 {
+    margin-bottom: 15px;
+    font-size: 17px;
+    text-align: center;
+}
+
+/* History table styles */
+.history-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.history-row {
+    display: flex;
+    border-bottom: 2px solid #00197b;
+}
+
+.history-cell {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Progress bar styles */
+.progress-bar-container {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background-color: #00197b;
+    border-radius: 10px;
+    border: 1px solid #00197b;
+    overflow: hidden;
+}
+
+.progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #65a3ff;
+    border-radius: 10px;
+    animation: progress-animation 2s ease forwards;
+}
+
+@keyframes progress-animation {
+    from {
+        width: 0;
+    }
+}
+
+/* Button styles */
+button {
+    display: inline-block;
+    padding: 6px;
+    width: 130px; 
+    height: 40px;
+    margin: 8px;
+    background-color: #65a3ff;
+    border: 1px solid #00197b;
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button i {
+    padding-right: 6px;
+    font-size: 17px;
+}
+
+button:hover {
+    background-color: #0a007b;
+    color: #fffdf3;
+}
+
+button:hover i {
+    color: #fffdf3;
+}
+
