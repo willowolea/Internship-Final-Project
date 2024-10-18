@@ -1,0 +1,88 @@
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: "Montserrat", sans-serif;
+} 
+
+:root { 
+    --background-color1: #fafaff; 
+    --background-color2: #ffffff; 
+    --background-color3: #ededed; 
+    --background-color4: #cad7fda4; 
+    --primary-color: #4b49ac; 
+    --secondary-color: #0c007d; 
+    --Border-color: #3f0097; 
+    --one-use-color: #3f0097; 
+    --two-use-color: #5500cb; 
+} 
+
+
+body {
+    background-color: var(--background-color3); 
+}
+
+.containerA {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+
+    background-color: var(--background-color4);
+    border-radius: 16px;
+    padding: 50px;
+    box-shadow: 0 10px 30px -10px var(--secondary-color);
+}
+
+.containerA h2 {
+    color: var(--secondary-color);
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.admin input {
+    text-align: center;
+    border-color: var(--Border-color);
+    border-radius: 16px;
+    width: 250px;
+    height: 48px;
+    margin-left: 50px;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: 14px;
+}
+
+.admin button {
+    color: var(--background-color2);
+    background-color: var(--two-use-color);
+    border-color: #000000;
+    outline: none;
+    border-radius: 16px;
+    width: 100px;
+    margin-left: 50px;
+    height: 48px;
+    font-size: 14px;
+    padding: 8px 8px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.admin button:hover {
+    color: var(--background-color2);
+    background-color: var(--secondary-color);
+    border-color:#000000;
+    cursor: pointer;
+}
+
+.containerA img {
+    width: 300px;
+    margin: auto;
+    padding-left: 16px;
+    margin: 16px;
+}
